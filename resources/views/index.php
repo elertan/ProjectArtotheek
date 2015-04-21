@@ -22,6 +22,7 @@
 	<div id="main" role="main" ng-init="names=<?=$artistsNamesData?>">
 		<p class="margin-left-30" id="tbxLabel">Search:</p>
 		<input ng-model="tbxSearch" type="text" name="tbxSearch" id="tbxSearch">
+		<a href="/artists/create" style="float: right;">Add New +</a>
 		<div class="artworks-gallery">
 			<div class="portrait" ng-repeat="name in names | filter:tbxSearch">
 				<a href="/artists/{{ name.toLowerCase().split(' ').join('-') }}">

@@ -13,6 +13,8 @@
 
 Route::get('/', 'IndexController@index');
 
+Route::get('/artists/create', ['as' => 'artist', 'uses' => 'ArtistController@create']);
+Route::post('/artists/create', ['as' => 'artist_store', 'uses' => 'ArtistController@store']);
 Route::get('/artists/{artist}', 'ArtistController@showProfile');
 
 Route::controllers([

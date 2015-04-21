@@ -20,6 +20,16 @@ header {
 	min-height: 120px;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #15A1F2;
+}
+
 .header-logo {
 	margin-top: 30px;
 	display: block;

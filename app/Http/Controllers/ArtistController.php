@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App;
+use Request;
 
 class ArtistController extends Controller {
 
@@ -43,6 +44,15 @@ class ArtistController extends Controller {
 		return view('artist/showProfile', [
 			'artist' => $artist
 		]);
+	}
+
+	public function create() {
+		return view('artist/create', []);
+	}
+
+	public function store() {
+		$input = Request::all();
+		echo $input["test"];
 	}
 
 }
